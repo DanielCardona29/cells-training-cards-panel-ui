@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cells-training-cards-panel-ui demo</title>
+  <script src="../build/webcomponents-loader.js"></script>
+  <script src="../build/scoping-ambients-shim.min.js"></script>
+  <script src="../build/custom-style-interface.min.js"></script>
+  <script>
+    {
+      const _customElementsDefine = window.customElements.define;
+      window.customElements.define = (name, cl, conf) => {
+        if (customElements.get(name)) {
+          console.warn(`${name} has been defined twice`);
+        } else {
+          _customElementsDefine.call(window.customElements, name, cl, conf);
+        }
+      };
+    }
+  </script>
+  <script defer src="../build/component.js"></script>
+  <script type="module" crossorigin="use-credentials">
+    import '../build/demo-build.js';
+  </script>
+</head>
+
+<body>
+  <bbva-core-demo-helper>
+    <bbva-core-demo-case heading="Basic" description="Default specs">
+      <template>
+        <cells-training-cards-panel-ui></cells-training-cards-panel-ui>
+
+
+        <script>
+
+          const data = [
+            {
+              "brand": "VISA",
+              "cardId": "1102",
+              "cardNumber": "4165 5738 3765 5476",
+              "currentBalance": {
+                "amount": 60000,
+                "currency": "MXN"
+              },
+              "name": "Mi otra tarjeta crédito",
+              "padingBalance": {
+                "amount": 0,
+                "currency": "MXN"
+              },
+              "status": ""
+            },
+            {
+              "brand": "VISA",
+              "cardId": "1101",
+              "cardNumber": "4165 5738 3765 9836",
+              "currentBalance": {
+                "amount": 65000,
+                "currency": "MXN"
+              },
+              "name": "Mi tarjeta crédito *59836",
+              "padingBalance": {
+                "amount": 50000,
+                "currency": "MXN"
+              },
+              "status": "blocked"
+            },
+            {
+              "brand": "VISA",
+              "cardId": "1103",
+              "cardNumber": "4165 5738 3765 9839",
+              "currentBalance": {
+                "amount": -10000,
+                "currency": "MXN"
+              },
+              "name": "Mi tarjeta crédito *59839",
+              "padingBalance": {
+                "amount": 0,
+                "currency": "MXN"
+              },
+              "status": ""
+            },
+            {
+              "brand": "VISA",
+              "cardId": "1105",
+              "cardNumber": "4165 5738 3765 9840",
+              "currentBalance": {
+                "amount": 90000,
+                "currency": "MXN"
+              },
+              "name": "Mi tarjeta crédito restaurantes *59840",
+              "padingBalance": {
+                "amount": 0,
+                "currency": "MXN"
+              },
+              "status": ""
+            },
+            {
+              "brand": "VISA",
+              "cardId": "1106",
+              "cardNumber": "4165 5738 3765 9841",
+              "currentBalance": {
+                "amount": 90000,
+                "currency": "MXN"
+              },
+              "name": "Mi tarjeta crédito restaurantes *59841",
+              "padingBalance": {
+                "amount": 0,
+                "currency": "MXN"
+              },
+              "status": ""
+            },
+            {
+              "brand": "VISA",
+              "cardId": "1107",
+              "cardNumber": "4165 5738 3765 9552",
+              "currentBalance": {
+                "amount": 12500,
+                "currency": "MXN"
+              },
+              "name": "Tarjeta Azul",
+              "padingBalance": {
+                "amount": 2000,
+                "currency": "MXN"
+              },
+              "status": ""
+            },
+            {
+              "brand": "VISA",
+              "cardId": "1109",
+              "cardNumber": "4165 5738 3765 8124",
+              "currentBalance": {
+                "amount": 1121,
+                "currency": "MXN"
+              },
+              "name": "Tarjeta incorrecta",
+              "padingBalance": {
+                "amount": 1000,
+                "currency": "MXN"
+              },
+              "status": ""
+            },
+            {
+              "brand": "VISA",
+              "cardId": "2001",
+              "cardNumber": "4318 5738 3765 3283",
+              "currentBalance": {
+                "amount": 1800000,
+                "currency": "MXN"
+              },
+              "name": "Tarjeta crédito",
+              "padingBalance": {
+                "amount": 200000,
+                "currency": "MXN"
+              },
+              "status": ""
+            },
+            {
+              "brand": "VISA",
+              "cardId": "2002",
+              "cardNumber": "1234 5678 1234 0987",
+              "currentBalance": {
+                "amount": 1800000,
+                "currency": "MXN"
+              },
+              "name": "Tarjeta Débito",
+              "padingBalance": {
+                "amount": 200000,
+                "currency": "MXN"
+              },
+              "status": ""
+            }
+          ]
+
+          const panel = document.querySelector('cells-training-cards-panel-ui');
+
+          panel.cardsList = data;
+
+
+
+        </script>
+      </template>
+    </bbva-core-demo-case>
+  </bbva-core-demo-helper>
+</body>
+
+</html>

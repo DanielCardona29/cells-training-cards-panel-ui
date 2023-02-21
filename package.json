@@ -1,0 +1,22 @@
+{
+  "name": "@training/cells-training-cards-panel-ui",
+  "version": "1.0.0-rc.1",
+  "description": "",
+  "keywords": [],
+  "main": "index.js",
+  "files": [
+    "/src/",
+    "/locales/",
+    "*.js",
+    "!**/*.scss"
+  ],
+  "dependencies": {
+    "@bbva-web-components/bbva-core-lit-helpers": "^1.0.4",
+    "@bbva-web-components/bbva-foundations-styles": "^2.3.5",
+    "@bbva-web-components/bbva-list-card": "^7.18.9",
+    "lit-element": "^2.0.0"
+  },
+  "devDependencies": {
+    "@cells/cells-component-core": "^3.1.0"
+  }
+}
