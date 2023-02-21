@@ -84,11 +84,8 @@ export class CellsTrainingCardsPanelUi extends LitElement {
   // Define a template
   render() {
     return html`
-              <div class="card-wrapper">
-                <h4>Tarjetas de credito</h4>
-                <div>
+              <div>
                   ${this.cardListMap()}
-                </div>
               </div>
     `;
   }
