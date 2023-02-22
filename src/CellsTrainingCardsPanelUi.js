@@ -23,7 +23,9 @@ export class CellsTrainingCardsPanelUi extends LitElement {
       currenciesBalancePedding: {
         type: String,
         attribute: 'currencies-balances-pedding'
-      }
+      },
+
+      isLoading: { type: Boolean }
     };
   }
 
@@ -33,6 +35,7 @@ export class CellsTrainingCardsPanelUi extends LitElement {
     this.cardsList = [];
     this.currenciesBalanceAvalible = 'Saldo disponible';
     this.currenciesBalancePedding = 'Saldo Pendiente';
+    this.isLoading = true;
   }
 
   static get styles() {
@@ -40,6 +43,15 @@ export class CellsTrainingCardsPanelUi extends LitElement {
       styles,
       getComponentSharedStyles('cells-training-cards-panel-ui-shared-styles')
     ];
+  }
+
+
+  loadingMap() {
+    const elements = [];
+    for (let i = 0; i < 3; i++) {
+      elements.push(html`<bbva-list-card loading></bbva-list-card>`)
+    }
+    return elements
   }
 
 
@@ -85,7 +97,7 @@ export class CellsTrainingCardsPanelUi extends LitElement {
   render() {
     return html`
               <div>
-                  ${this.cardListMap()}
+                ${this.isLoading ? this.loadingMap() : this.cardListMap()}
               </div>
     `;
   }
