@@ -60,7 +60,6 @@ export class CellsTrainingCardsPanelUi extends LitElement {
 
     const imagesList = [{ id: 'VISA', link: '/images/visa.png' }]
 
-    console.log(data)
     return data.map((card) => {
       const formatter = new Intl.NumberFormat(window.IntlMsg.lang, {
         style: 'currency',
