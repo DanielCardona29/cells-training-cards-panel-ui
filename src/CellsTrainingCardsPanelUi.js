@@ -81,7 +81,7 @@ export class CellsTrainingCardsPanelUi extends LitElement {
           break;
 
         case 'OPERATIVE':
-          status = ''
+          status = 'success'
           name = 'operativa'
           break;
 
