@@ -118,11 +118,11 @@ export class CellsTrainingCardsPanelUi extends LitElement {
 
 
       return html`
-        <bbva-list-card class="card" variant="card" show-card id=${card.cardId} card-status=${status} card-title=${card.name}
-          num-product=${card.cardNumber} amount=${card.padingBalance.amount} currency-code=${card.padingBalance.currency}
-          content-text=${this.currenciesBalancePedding} credit-balance=${formatter.format(card.currentBalance.amount)}
-          secondary-currency-code=${card.currentBalance.currency} content-text-extra=${this.currenciesBalanceAvalible}
-          card-image=${imagesList.find(item => item.id === card.brand).link}
+        <bbva-list-card class="card" variant="card" show-card id=${card.cardId} card-status=${status !=="success" ? status : ''
+          } card-title=${card.name} num-product=${card.cardNumber} amount=${card.padingBalance.amount}
+          currency-code=${card.padingBalance.currency} content-text=${this.currenciesBalancePedding}
+          credit-balance=${formatter.format(card.currentBalance.amount)} secondary-currency-code=${card.currentBalance.currency}
+          content-text-extra=${this.currenciesBalanceAvalible} card-image=${imagesList.find(item=> item.id === card.brand).link}
           badge-text=${name}
           badge-type=${status}
           @click=${this.cardClick}
